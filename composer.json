@@ -1,0 +1,34 @@
+{
+  "name": "szemul/slim-app-bootstrap",
+  "description": "Bootstrapper for the slim app",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "szemul/bootstrap": "^1.0.0",
+    "szemul/config": "^1.0.1",
+    "szemul/router": "^1.0.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0.0",
+    "jetbrains/phpstorm-attributes": "^1.0",
+    "mockery/mockery": "^1.0",
+    "phpstan/phpstan": "^1.4.0",
+    "phpunit/phpunit": "^9.5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Szemul\\SlimAppBootstrap\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Szemul\\SlimAppBootstrap\\Test\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "allow-plugins": false
+  }
+}
