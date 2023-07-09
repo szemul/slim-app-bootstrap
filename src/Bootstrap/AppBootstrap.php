@@ -21,9 +21,9 @@ class AppBootstrap implements BootstrapInterface
     protected array $middlewares;
 
     public function __construct(
-        protected ?RouterInterface              $router = null,
+        protected ?RouterInterface $router = null,
         protected ?ErrorHandlerFactoryInterface $errorHandlerFactory = null,
-        MiddlewareInterface                     ...$middlewares
+        MiddlewareInterface ...$middlewares,
     ) {
         $this->middlewares = $middlewares;
     }
@@ -32,7 +32,7 @@ class AppBootstrap implements BootstrapInterface
     public function __debugInfo(): ?array
     {
         return [
-            'middlewares' => array_map(fn($value) => '*** Instance of ' . get_class($value), $this->middlewares),
+            'middlewares' => array_map(fn ($value) => '*** Instance of ' . get_class($value), $this->middlewares),
             'router'      => '*** Instance of ' . get_class($this->router),
         ];
     }

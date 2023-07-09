@@ -11,5 +11,4 @@ use Slim\Handlers\ErrorHandler as SlimErrorHandler;
 interface ErrorHandlerFactoryInterface
 {
     public function getErrorHandler(ContainerInterface $container, App $app): SlimErrorHandler;
-
 }
